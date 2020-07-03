@@ -1,6 +1,17 @@
-import React from 'react';
-import './App.css';
+import React, { Fragment } from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Carousel from "./components/Carousel";
 
-const App = () => <h1>React-Template</h1>;
+const App = () => {
+  return (
+    <Fragment>
+      <Navbar />
+      <Hero />
+      <Carousel />
+    </Fragment>
+  );
+};
 
 export default App;

@@ -1,0 +1,17 @@
+.hero__container{
+  position: relative;
+  width: 100vw;
+  height: 500px;
+  margin-top: -68px;
+}
+
+.hero__container__bg{
+  background-image:url('../../images/illustration-intro.svg'), url('../../images/bg-tablet-pattern.svg');
+  background-position-x: center,85px;
+  background-position-y: 80px,-230px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: 345px, 600px;
+  max-height: max-content;
+  background-blend-mode: normal,color;
+}
