@@ -1,4 +1,5 @@
 import React from "react";
+import "./css/Dot.css";
 
 const Dot = (props) => {
   return (

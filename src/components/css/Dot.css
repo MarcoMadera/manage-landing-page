@@ -1,0 +1,15 @@
+.carousel__indicator{
+  border: 0;
+  border-radius: 50%;
+  border: 1px solid var(--Button);
+  width: 10px;
+  background-color: white;
+  height: 10px;
+  cursor: pointer;
+  margin: 0 6px;
+  outline: none;
+}
+
+.carousel__indicator.current-dot{
+  background-color: var(--Button);
+} 

@@ -5,6 +5,16 @@
   overflow-x: hidden;
 } 
 
+.carousel__container__title{
+  color: var(--Dark-Blue);
+  font-size: 30.4px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: -0.070rem;
+  word-spacing: 0.1rem;
+  margin-top: 30px;
+}
+
 .carousel__container__items{
   display: flex;
 }
@@ -29,19 +39,5 @@
 .carousel__nav{
   display: flex;
   justify-content: center;
-  padding: 10px 0;
+  padding: 10px 0 40px 0;
 }
-
-.carousel__indicator{
-  border: 0;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  background-color: rgba(0, 30, 0, 0.7);
-  cursor: pointer;
-  margin: 0 12px;
-}
-
-.carousel__indicator.current-dot{
-  background-color: rgba(0,0,0,.85);
-} 

@@ -1,0 +1,16 @@
+.differences__container__title{
+  padding: 0 36px;
+  color: var(--Dark-Blue);
+  font-size: 30.4px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: -0.070rem;
+  word-spacing: 0.1rem;
+}
+
+.differences__container__desc{
+  padding: 8px 30px 30px 30px;
+  color: var(--Dark-Grayish-Blue);
+  font-size: 14px;
+  line-height: 2;
+}

@@ -7,8 +7,29 @@
 body{
   text-align: center;
   font-family: 'Be Vietnam', sans-serif;
+  overflow-x: hidden;
 }
 html {
   width: 100vw;
-  overflow-x: hidden;
+}
+
+.block-overflow{
+  overflow-y: hidden;
+}
+
+h1{
+  letter-spacing: -0.080rem;
+  word-spacing: 0.07rem;
+  line-height: 1.25;
+}
+
+:root{
+  --Bright-Red: hsl(13, 14%, 44%);
+  --Dark-Blue: hsl(228, 39%, 23%);
+
+  --Dark-Grayish-Blue: hsl(227, 12%, 61%);
+  --Very-Dark-Blue: hsl(233, 12%, 13%);
+  --Very-Pale-Red: hsl(13, 100%, 96%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --Button: #f1613e;
 }

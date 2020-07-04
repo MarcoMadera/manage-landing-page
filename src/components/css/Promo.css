@@ -1,0 +1,28 @@
+.Promo{
+  margin: 50px 0 0 0;
+}
+.promo__container{
+  height: 405px;
+  background-image: url('../../images/bg-simplify-section-mobile.svg');
+  background-color: var(--Button);
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: center;
+  background-size: 100px;
+  padding: 0 30px;
+}
+
+.promo__container__title{
+  padding: 100px 0 40px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 38px;
+}
+
+.promo__container .button__container{
+  background-color: white;
+  color: var(--Button);
+  text-shadow:0px 1px 0px white;
+  box-shadow: 0px 10px 14px -7px rgba(0, 0, 0, 0.3);
+}

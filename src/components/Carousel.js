@@ -1,8 +1,9 @@
-import React, { useRef, useEffect, useState, Fragment } from "react";
+import React, { useEffect, useState } from "react";
 import "./css/Carousel.css";
 import CarouselItem from "./CarouselItem";
 import Dot from "./Dot";
 import data from "../comments.json";
+import Button from "./Button";
 
 const Carousel = () => {
   const [comments, setComments] = useState([]);
@@ -65,6 +66,7 @@ const Carousel = () => {
   return (
     <div className="Carousel">
       <div className="carousel__container">
+        <h1 className="carousel__container__title">What they've said</h1>
         <ul className="carousel__container__items">
           {comments.map((e, i) => {
             return i == 0 ? (
@@ -107,6 +109,7 @@ const Carousel = () => {
           )
         )}
       </div>
+      <Button link="./#GetStarted" cont="Get Started" />
     </div>
   );
 };

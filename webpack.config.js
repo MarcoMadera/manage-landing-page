@@ -40,12 +40,16 @@ module.exports = {
         ],
       },
       {
-        test: /\.svg|png|jpg$/,
+        test: /\png|jpg$/,
         use: [
           {
             loader: "file-loader",
           },
         ],
+      },
+      {
+        test: /\.svg$/,
+        use: ["@svgr/webpack", { loader: "file-loader" }],
       },
     ],
   },

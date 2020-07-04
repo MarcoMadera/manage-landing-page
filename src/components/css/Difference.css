@@ -1,0 +1,37 @@
+.difference__container__number{
+  margin-left: 10px;
+  padding: 3px 15px 5px 15px;
+  border-radius: 50px;
+  color:white;
+  user-select: none;
+  font-size: 14px;
+  background: var(--Button)
+}
+
+.difference__container__title{
+  text-align: start;
+  margin: 0 0 0px 15px;
+  border-radius: 50px 0 0 50px;
+  background: #f1623e10;
+}
+
+.difference__container__title__numberlabel{
+  display: inline-block;
+  padding: 8px 25px;
+  border-radius: 50px;
+  background: var(--Button);
+  color: white;
+}
+.difference__container__title__content{
+  padding-left: 14px;
+  color: var(--Dark-Blue);
+  font-weight: 700;
+}
+
+.difference__container__desc{
+  text-align: start;
+  margin: 9px 15px;
+  color: var(--Dark-Grayish-Blue);
+  font-size: 14px;
+  line-height: 2;
+}

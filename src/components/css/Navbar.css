@@ -1,12 +1,12 @@
 .navbar__container{
   align-items: center;
   overflow: hidden; 
-  padding: 20px;
+  padding: 41px 24px 23.5px 6px;
   position: relative;
-  z-index: 1;
 }
 
 .navbar__container__logo{
+  transform: scale(0.75);
   float: left;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .navbar__container__hamburgerMenu img{
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 @media screen and (min-width: 1240px){
@@ -49,9 +49,6 @@
   .navbar__container__pages a:hover{
     text-align:center;
     padding-bottom:1px;
-    background: linear-gradient(to right, var(--Lime-Green) 5%, var(--Bright-Cyan) 100%)left 
-    bottom  
-    no-repeat;
     background-size:100% 5px ;
   }
 
