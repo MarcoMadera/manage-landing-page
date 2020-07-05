@@ -23,10 +23,10 @@
   vertical-align: top;
 }
 
-@media screen and (min-width: 1240px){
+@media screen and (min-width: 768px){
   .navbar__container{
     display: flex;
-    padding: 0px 160px;
+    padding: 41px 11.111vw 23.5px 11.111vw;
     justify-content: space-between;
   }
 
@@ -36,14 +36,15 @@
 
   .navbar__container__logo img{
     margin: 15px 0 5px 11px;
+    transform: scale(1.34);
   }
   
   .navbar__container__pages a{
     text-decoration: none;
     color: var(--Dark-Blue);
-    font-weight: 400;
+    font-weight: 500;
     padding: 31.5px 14px;
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .navbar__container__pages a:hover{

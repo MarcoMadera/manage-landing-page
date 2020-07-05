@@ -1,6 +1,9 @@
+.Hero{
+  margin-top: -93px;
+}
+
 .hero__container{
   width: 100vw;
-  margin-top: -93px;
 }
 
 .hero__container__bg{
@@ -36,4 +39,47 @@
   font-weight: 400;
   color: var(--Dark-Grayish-Blue);
   line-height: 1.8;
+}
+
+@media screen and (min-width: 768px){
+  .Hero{
+    margin: -150px 0px 0 0px;
+  }
+
+  .hero__container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .hero__container__midbg{
+    order: 1;
+    margin-top: 270px;
+    background: unset;
+  }
+  .hero__container__bg{
+    order: 2;
+    height: 839px;
+    background-size: 580px, 810px;
+    background-position-x: -5px, 50px;
+    background-position-y: 215px, -140px;
+  }
+
+  .hero__container__title, .hero__container__desc{
+    margin: 0px 0px 0 166px;
+    text-align: start;
+  }
+
+  .hero__container__title{
+    font-size: 56px;
+    line-height: 1.15;
+    margin-bottom: 34px;
+  }
+  .hero__container__desc{
+    width: 48%;
+    margin-bottom: 34px;
+  }
+
+  .hero__container .Button{
+    text-align: start;
+    margin-left: 166px;
+  }
 }

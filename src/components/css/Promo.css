@@ -26,3 +26,34 @@
   text-shadow:0px 1px 0px white;
   box-shadow: 0px 10px 14px -7px rgba(0, 0, 0, 0.3);
 }
+
+@media screen and (min-width: 768px){
+  .Promo{
+    margin-top: 180px;
+  }
+
+  .promo__container{
+    height: 220px;
+    padding: 0 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../../images/bg-simplify-section-desktop.svg');
+    background-size: 1440px;
+    background-position-x: 260px;
+  background-position-y: -130px;
+  }
+  .promo__container__title{
+    padding: 0 0 0 20px;
+    max-width: 50%;
+    text-align: start;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 1.18;
+    letter-spacing: 0.02px;
+  }
+  .promo__container .Button{
+    display: block;
+    float: right;
+  }
+}

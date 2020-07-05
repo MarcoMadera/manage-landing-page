@@ -3,6 +3,7 @@ import "./css/Navbar.css";
 import logo from "../images/logo.svg";
 import hamburgerMenuico from "../images/icon-hamburger.svg";
 import closeMenuico from "../images/icon-close.svg";
+import Button from "./Button";
 
 const Navbar = (props) => {
   return (
@@ -18,7 +19,6 @@ const Navbar = (props) => {
           <a href="./#careers">Careers</a>
           <a href="./#community">Community</a>
         </div>
-        <div className="navbar__container__button"></div>
         <div className="navbar__container__hamburgerMenu">
           {!props.show ? (
             <img
@@ -33,6 +33,9 @@ const Navbar = (props) => {
               alt="Menu"
             />
           )}
+        </div>
+        <div className="navbar__container__button">
+          <Button link="./#GetStarted" cont="Get Started" />
         </div>
       </div>
     </div>

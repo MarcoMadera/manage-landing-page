@@ -12,7 +12,7 @@ const Carousel = () => {
     setInterval(() => next(), 7000);
   }, []);
   const setSlidePosition = (slide, i, slideWidth) => {
-    slide.style.left = (slideWidth + 60) * i + "px";
+    slide.style.left = slideWidth * i + "px";
   };
 
   const moveToSlide = (track, currentSlide, targetSlide) => {
@@ -32,13 +32,13 @@ const Carousel = () => {
     const dots = Array.from(dotsNavs.children);
     const currentSlide = document.querySelector(".current-slide");
     let nextSlide = currentSlide.nextElementSibling;
-    if (nextSlide == slides[slides.length - 3]) nextSlide = slides[0];
+    if (nextSlide == slides[slides.length - 6]) nextSlide = slides[0];
     const currentDot = document.querySelector(".current-dot");
     let targetDot = currentDot.nextElementSibling;
     if (targetDot == null) targetDot = dots[0];
     moveToSlide(track, currentSlide, nextSlide);
 
-    if (currentSlide != slides[slides.length - 4]) {
+    if (currentSlide != slides[slides.length - 7]) {
       document.querySelector(".current-dot").classList.remove("current-dot");
       targetDot.classList.add("current-dot");
       track.style.transitionProperty = "transform";
@@ -88,6 +88,18 @@ const Carousel = () => {
           })}
           {comments.map((e, i) => {
             while (i < 4) {
+              return (
+                <CarouselItem
+                  key={e.id}
+                  avatar={e.avatar}
+                  name={e.name}
+                  comment={e.comment}
+                />
+              );
+            }
+          })}
+          {comments.map((e, i) => {
+            while (i < 3) {
               return (
                 <CarouselItem
                   key={e.id}
