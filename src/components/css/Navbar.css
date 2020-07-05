@@ -23,6 +23,10 @@
   vertical-align: top;
 }
 
+.navbar__container__pages a:hover{
+  color: #242d52c2;
+}
+
 @media screen and (min-width: 768px){
   .navbar__container{
     display: flex;
@@ -45,12 +49,6 @@
     font-weight: 500;
     padding: 31.5px 14px;
     font-size: 13px;
-  }
-
-  .navbar__container__pages a:hover{
-    text-align:center;
-    padding-bottom:1px;
-    background-size:100% 5px ;
   }
 
   .navbar__container__hamburgerMenu{

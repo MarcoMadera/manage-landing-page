@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./css/Footer.css";
 import Button from "./Button";
 import { ReactComponent as Facebook } from "../images/icon-facebook.svg";
@@ -9,21 +9,52 @@ import { ReactComponent as Instagram } from "../images/icon-instagram.svg";
 import { ReactComponent as Logo } from "../images/logo.svg";
 
 const Footer = () => {
-  const search = () => {
-    console.log("busca");
+  const [email, setEmail] = useState({
+    value: "",
+    error: false,
+    submitted: false,
+  });
+
+  const handleChange = (event) => {
+    const res = event.target.value;
+    setEmail({ value: res, error: false, submitted: false });
   };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setEmail({
+      error: !emailRegex.test(email.value),
+      submitted: true,
+    });
+  };
+
+  const emailRegex = RegExp(
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+
+  let outline = { outline: "unset" };
+  if (email.error && email.submitted) {
+    outline = { border: "1px solid red" };
+  }
+
   return (
     <div className="Footer">
       <div className="footer__container">
         <div className="footer__container__search">
-          <input
-            className="footer__container__search__input"
-            type="email"
-            name="inbox"
-            id="inbox"
-            placeholder="Updates in your inbox…"
-          />
-          <Button cont="Go" onClick={search} />
+          <form noValidate id="form" action="#" onSubmit={handleSubmit}>
+            <input
+              noValidate
+              className="footer__container__search__input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Updates in your inbox…"
+              onChange={handleChange}
+              style={outline}
+            />
+            <Button cont="Go" onClick={handleSubmit} />
+          </form>
+          {email.error && email.submitted && <p>Please insert a valid email</p>}
         </div>
         <div className="footer__container__links">
           <a href="./#home">Home</a>
