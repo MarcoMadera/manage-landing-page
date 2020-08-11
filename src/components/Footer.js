@@ -29,7 +29,7 @@ const Footer = () => {
   };
 
   const emailRegex = RegExp(
-    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   );
 
   let outline = { outline: "unset" };
@@ -52,7 +52,7 @@ const Footer = () => {
               onChange={handleChange}
               style={outline}
             />
-            <Button cont="Go" onClick={handleSubmit} />
+            <Button onClick={handleSubmit}>Go</Button>
           </form>
           {email.error && email.submitted && <p>Please insert a valid email</p>}
         </div>

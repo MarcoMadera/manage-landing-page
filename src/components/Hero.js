@@ -14,7 +14,7 @@ const Hero = () => {
             Manage makes it simple for software teams to plan day-to-day tasks
             while keeping the larger team goals in view.
           </p>
-          <Button link="./#GetStarted" cont="Get Started" />
+          <Button link="./#GetStarted">Get Started</Button>
         </div>
       </div>
     </div>

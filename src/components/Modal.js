@@ -1,13 +1,18 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "./css/Modal.css";
 import ReactDOM from "react-dom";
 
-function Modal(props) {
-  const { show, closeModal } = props;
-
+function Modal({ show, closeModal }) {
   const modal = (
     <div className="modal__container">
-      <div className={show ? "overlay" : "hide"} onClick={closeModal} />
+      <div
+        className={show ? "overlay" : "hide"}
+        aria-checked={show}
+        tabIndex="0"
+        onClick={() => closeModal()}
+        role="switch"
+        onKeyDown={(e) => e.keyCode === 27 && closeModal()}
+      />
       <div className={show ? "modal" : "hide"}>
         <div className="modal__container__links">
           <a href="./#pricing">Pricing</a>

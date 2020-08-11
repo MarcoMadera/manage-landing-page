@@ -4,8 +4,9 @@ import logo from "../images/logo.svg";
 import hamburgerMenuico from "../images/icon-hamburger.svg";
 import closeMenuico from "../images/icon-close.svg";
 import Button from "./Button";
+import PropTypes from "prop-types";
 
-const Navbar = (props) => {
+const Navbar = ({ show, openModal, closeModal }) => {
   return (
     <div className="Navbar">
       <div className="navbar__container">
@@ -20,26 +21,28 @@ const Navbar = (props) => {
           <a href="./#community">Community</a>
         </div>
         <div className="navbar__container__hamburgerMenu">
-          {!props.show ? (
-            <img
-              onClick={() => props.openModal()}
-              src={hamburgerMenuico}
-              alt="Menu"
-            />
+          {!show ? (
+            <button onClick={() => openModal()}>
+              <img src={hamburgerMenuico} alt="Open Menu" />
+            </button>
           ) : (
-            <img
-              onClick={() => props.closeModal()}
-              src={closeMenuico}
-              alt="Menu"
-            />
+            <button onClick={() => closeModal()}>
+              <img src={closeMenuico} alt="Close Menu" />
+            </button>
           )}
         </div>
         <div className="navbar__container__button">
-          <Button link="./#GetStarted" cont="Get Started" />
+          <Button link="./#GetStarted">Get Started</Button>
         </div>
       </div>
     </div>
   );
+};
+
+Navbar.propTypes = {
+  show: PropTypes.bool,
+  openModal: PropTypes.func,
+  closeModal: PropTypes.func,
 };
 
 export default Navbar;

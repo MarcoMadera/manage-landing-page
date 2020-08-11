@@ -8,11 +8,9 @@ const Promo = () => {
         <h1 className="promo__container__title">
           Simplify how your team works today.
         </h1>
-        <Button
-          className="promo__container__Button"
-          link="./#GetStarted"
-          cont="Get Started"
-        />
+        <Button className="promo__container__Button" link="./#GetStarted">
+          Get Started
+        </Button>
       </div>
     </div>
   );

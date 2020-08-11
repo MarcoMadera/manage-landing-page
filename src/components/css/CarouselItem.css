@@ -1,43 +1,43 @@
-.CarouselItem{
+.CarouselItem {
   min-width: calc(100vw);
   padding: 50px 30px 0 30px;
 }
 
-.carouselItem__container{
+.carouselItem__container {
   background: var(--Very-Light-Gray);
   padding: 50px 0px 0 0px;
   height: 100%;
 }
 
-.carouselItem__image{
+.carouselItem__image {
   margin: -140px auto 0 auto;
   transform: scale(0.5);
 }
 
-.carouselItem__container__name{
+.carouselItem__container__name {
   padding: 0;
   margin: -20px 0 0 0;
 }
 
-.carouselItem__container__comment{
+.carouselItem__container__comment {
   padding: 20px 30px 30px 30px;
   color: var(--Dark-Grayish-Blue);
   font-size: 13px;
   font-weight: 400;
 }
 
-@media screen and (min-width: 768px){
-  .CarouselItem{
+@media screen and (min-width: 1024px) {
+  .CarouselItem {
     min-width: calc(38.194vw);
     margin: 0;
     padding: 50px 15px 0 15px;
   }
 
-  .carouselItem__container__name{
+  .carouselItem__container__name {
     font-size: 17px;
   }
 
-  .carouselItem__container__comment{
+  .carouselItem__container__comment {
     font-size: 16px;
     padding: 22px 30px 34px 30px;
     line-height: 1.5;

@@ -1,30 +1,29 @@
-.carousel__container{
+.carousel__container {
   height: 100%;
   position: relative;
   width: 100%;
   overflow-x: hidden;
-} 
+}
 
-.carousel__container__title{
+.carousel__container__title {
   color: var(--Dark-Blue);
   font-size: 30.4px;
   font-weight: 800;
   line-height: 1.5;
-  letter-spacing: -0.070rem;
+  letter-spacing: -0.07rem;
   word-spacing: 0.1rem;
   margin-top: 30px;
 }
 
-.carousel__container__items{
+.carousel__container__items {
   display: flex;
-  
 }
-.carousel__container__items li{
+.carousel__container__items li {
   list-style-type: none;
   align-items: center;
 }
 
-.carousel__container__items{
+.carousel__container__items {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -33,43 +32,42 @@
   transition: transform 400ms ease-in;
 }
 
-.carousel_button img{
+.carousel_button img {
   width: 12px;
 }
 
-.carousel__nav{
+.carousel__nav {
   display: flex;
   justify-content: center;
   padding: 10px 0 40px 0;
 }
 
-@media screen and (min-width: 768px){
-
-  .Carousel{
+@media screen and (min-width: 1024px) {
+  .Carousel {
     margin-top: -500px;
     background-repeat: no-repeat;
-    background-image: url('../../images/bg-tablet-pattern.svg');
+    background-image: url("../../images/bg-tablet-pattern.svg");
     background-size: 800px;
     background-position-x: -480px;
     background-position-y: 0px;
   }
 
-  .carousel__container{
+  .carousel__container {
     margin-bottom: 46px;
   }
 
-  .carousel__container__title{
+  .carousel__container__title {
     margin-top: 395px;
     margin-bottom: 50px;
     font-size: 40px;
   }
 
-  .carousel__container__items{
+  .carousel__container__items {
     justify-content: center;
     left: calc(38.194vw);
   }
 
-  .carousel__nav{
+  .carousel__nav {
     display: none;
   }
 }

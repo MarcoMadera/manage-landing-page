@@ -1,8 +1,8 @@
-.footer__container{
+.footer__container {
   background: var(--Very-Dark-Blue);
   padding-bottom: 30px;
 }
-.footer__container__search__input{
+.footer__container__search__input {
   border: unset;
   border-radius: 28px;
   padding: 0 40px;
@@ -10,37 +10,37 @@
   user-select: none;
 }
 
-.footer__container__search{
+.footer__container__search {
   padding-top: 50px;
   justify-content: center;
 }
 
-.footer__container__search input:focus{
+.footer__container__search input:focus {
   outline: none;
 }
-.footer__container__search input{
+.footer__container__search input {
   color: var(--Button);
 }
 
-.footer__container .button__container{
+.footer__container .button__container {
   margin-left: 10px;
   padding: 13px 28px 14px;
   box-shadow: unset;
   border: none;
 }
 
-.footer__container__links{
+.footer__container__links {
   display: grid;
   margin: 50px auto 0 auto;
   grid-auto-flow: column;
-  grid-template-rows: repeat(4,1fr);
+  grid-template-rows: repeat(4, 1fr);
   column-gap: 100px;
   row-gap: 20px;
   justify-content: center;
   font-weight: 400;
 }
 
-.footer__container__links a{
+.footer__container__links a {
   text-align: start;
   width: fit-content;
   text-decoration: none;
@@ -49,77 +49,77 @@
   font-size: 14px;
 }
 
-.footer__container__links a:hover{
-  color: var(--Button)
+.footer__container__links a:hover {
+  color: var(--Button);
 }
 
-.footer__container__socialMedia{
+.footer__container__socialMedia {
   display: flex;
   justify-content: center;
 }
 
-.footer__container__socialMedia a{
+.footer__container__socialMedia a {
   width: fit-content;
   margin: 50px 22px;
 }
 
-.footer__container__socialMedia a:hover svg path{
-  fill: var(--Button)
+.footer__container__socialMedia a:hover svg path {
+  fill: var(--Button);
 }
 
-.footer__container__socialMedia svg{
+.footer__container__socialMedia svg {
   transform: scale(1.5);
 }
 
-.footer__container__logo{
+.footer__container__logo {
   margin-bottom: 30px;
 }
 
-.footer__container__logo svg>g>path{
+.footer__container__logo svg > g > path {
   fill: white;
 }
 
-.footer__container__copy{
+.footer__container__copy {
   color: var(--Dark-Grayish-Blue);
   font-size: 13px;
 }
 
-.footer__container__search p{
+.footer__container__search p {
   display: block;
   text-align: center;
   color: red;
   font-size: 13px;
 }
 
-@media screen and (min-width: 768px){
-  .footer__container{
+@media screen and (min-width: 1024px) {
+  .footer__container {
     justify-content: space-between;
-    padding: 70px 12vw; 
+    padding: 70px 12vw;
     display: grid;
-    grid-template: repeat(2,1fr) / repeat(4 ,minmax(0, 1fr));
+    grid-template: repeat(2, 1fr) / repeat(4, minmax(0, 1fr));
     grid-template-areas:
-    "logo links links search"
-    "media links links copy"
+      "logo links links search"
+      "media links links copy";
   }
-  
-  .footer__container__logo{
+
+  .footer__container__logo {
     grid-area: logo;
     margin: 0;
     justify-self: flex-start;
   }
 
-  .footer__container__search{
+  .footer__container__search {
     grid-area: search;
     justify-self: end;
     padding-top: 0px;
     align-items: center;
   }
 
-  .footer__container__search form{
+  .footer__container__search form {
     display: flex;
   }
 
-  .footer__container__links{
+  .footer__container__links {
     grid-area: links;
     row-gap: 10px;
     column-gap: 0;
@@ -129,25 +129,25 @@
     font-weight: 400;
   }
 
-  .footer__container__socialMedia{
+  .footer__container__socialMedia {
     grid-area: media;
     align-items: flex-end;
     justify-self: flex-start;
   }
 
-  .footer__container__socialMedia a{
+  .footer__container__socialMedia a {
     margin: 0 6px;
   }
 
-  .footer__container__socialMedia svg{
+  .footer__container__socialMedia svg {
     transform: unset;
   }
 
-  .footer__container__search__input{
+  .footer__container__search__input {
     width: 70%;
     padding: 0 0px 0 13px;
   }
-  .footer__container__copy{
+  .footer__container__copy {
     grid-area: copy;
     justify-self: end;
     align-self: end;
@@ -155,7 +155,7 @@
     min-width: 100%;
   }
 
-  .footer__container__search p{
+  .footer__container__search p {
     text-align: start;
   }
 }

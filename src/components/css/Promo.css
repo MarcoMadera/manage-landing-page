@@ -1,9 +1,9 @@
-.Promo{
+.Promo {
   margin: 50px 0 0 0;
 }
-.promo__container{
+.promo__container {
   height: 405px;
-  background-image: url('../../images/bg-simplify-section-mobile.svg');
+  background-image: url("../../images/bg-simplify-section-mobile.svg");
   background-color: var(--Button);
   background-repeat: no-repeat;
   background-position-x: left;
@@ -12,7 +12,7 @@
   padding: 0 30px;
 }
 
-.promo__container__title{
+.promo__container__title {
   padding: 100px 0 40px;
   color: white;
   text-align: center;
@@ -20,35 +20,35 @@
   font-size: 38px;
 }
 
-.promo__container .button__container{
+.promo__container .button__container {
   background-color: white;
   color: var(--Button);
-  text-shadow:0px 1px 0px white;
+  text-shadow: 0px 1px 0px white;
   box-shadow: 0px 10px 14px -7px rgba(0, 0, 0, 0.3);
 }
 
-.promo__container .button__container:hover{
+.promo__container .button__container:hover {
   background-color: rgba(255, 255, 255, 0.973);
   color: #f1623ed0;
 }
 
-@media screen and (min-width: 768px){
-  .Promo{
+@media screen and (min-width: 1024px) {
+  .Promo {
     margin-top: 180px;
   }
 
-  .promo__container{
+  .promo__container {
     height: 220px;
     padding: 0 160px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url('../../images/bg-simplify-section-desktop.svg');
+    background-image: url("../../images/bg-simplify-section-desktop.svg");
     background-size: 1440px;
     background-position-x: 260px;
-  background-position-y: -130px;
+    background-position-y: -130px;
   }
-  .promo__container__title{
+  .promo__container__title {
     padding: 0 0 0 20px;
     max-width: 50%;
     text-align: start;
@@ -57,7 +57,7 @@
     line-height: 1.18;
     letter-spacing: 0.02px;
   }
-  .promo__container .Button{
+  .promo__container .Button {
     display: block;
     float: right;
   }

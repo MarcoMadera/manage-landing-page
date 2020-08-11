@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import "./css/Carousel.css";
 import CarouselItem from "./CarouselItem";
 import Dot from "./Dot";
@@ -7,10 +7,12 @@ import Button from "./Button";
 
 const Carousel = () => {
   const [comments, setComments] = useState([]);
+
   useEffect(() => {
     setComments(data);
     setInterval(() => next(), 7000);
-  }, []);
+  }, [next]);
+
   const setSlidePosition = (slide, i, slideWidth) => {
     slide.style.left = slideWidth * i + "px";
   };
@@ -21,19 +23,21 @@ const Carousel = () => {
     targetSlide.classList.add("current-slide");
   };
 
-  const next = () => {
+  const next = useCallback(() => {
     const track = document.querySelector(".carousel__container__items");
+    const dotsNavs = document.querySelector(".carousel__nav");
+    const currentSlide = document.querySelector(".current-slide");
+    const currentDot = document.querySelector(".current-dot");
     const slides = Array.from(track.children);
     const slideWidth = slides[0].getBoundingClientRect().width;
+    const dots = Array.from(dotsNavs.children);
+
     slides.map((e, i) => {
       setSlidePosition(e, i, slideWidth);
     });
-    const dotsNavs = document.querySelector(".carousel__nav");
-    const dots = Array.from(dotsNavs.children);
-    const currentSlide = document.querySelector(".current-slide");
+
     let nextSlide = currentSlide.nextElementSibling;
     if (nextSlide == slides[slides.length - 6]) nextSlide = slides[0];
-    const currentDot = document.querySelector(".current-dot");
     let targetDot = currentDot.nextElementSibling;
     if (targetDot == null) targetDot = dots[0];
     moveToSlide(track, currentSlide, nextSlide);
@@ -46,17 +50,18 @@ const Carousel = () => {
       track.style.transitionProperty = "none";
       next();
     }
-  };
+  }, []);
 
   const onClickDot = (i) => {
     const track = document.querySelector(".carousel__container__items");
     const currentSlide = document.querySelector(".current-slide");
     const slides = Array.from(track.children);
     const slideWidth = slides[0].getBoundingClientRect().width;
+    const targetSlide = slides[i];
+
     slides.map((e, i) => {
       setSlidePosition(e, i, slideWidth);
     });
-    const targetSlide = slides[i];
     moveToSlide(track, currentSlide, targetSlide);
     document.querySelector(".current-dot").classList.remove("current-dot");
     document.querySelector(".carousel__nav").children[i].classList.value +=
@@ -66,46 +71,46 @@ const Carousel = () => {
   return (
     <div className="Carousel">
       <div className="carousel__container">
-        <h1 className="carousel__container__title">What they've said</h1>
+        <h1 className="carousel__container__title">What they&apos;ve said</h1>
         <ul className="carousel__container__items">
-          {comments.map((e, i) => {
+          {comments.map(({ id, avatar, name, comment }, i) => {
             return i == 0 ? (
               <CarouselItem
-                key={e.id}
-                avatar={e.avatar}
-                name={e.name}
-                comment={e.comment}
+                key={id}
+                avatar={avatar}
+                name={name}
+                comment={comment}
                 current={true}
               />
             ) : (
               <CarouselItem
-                key={e.id}
-                avatar={e.avatar}
-                name={e.name}
-                comment={e.comment}
+                key={id}
+                avatar={avatar}
+                name={name}
+                comment={comment}
               />
             );
           })}
-          {comments.map((e, i) => {
+          {comments.map(({ id, avatar, name, comment }, i) => {
             while (i < 4) {
               return (
                 <CarouselItem
-                  key={e.id}
-                  avatar={e.avatar}
-                  name={e.name}
-                  comment={e.comment}
+                  key={id}
+                  avatar={avatar}
+                  name={name}
+                  comment={comment}
                 />
               );
             }
           })}
-          {comments.map((e, i) => {
+          {comments.map(({ id, avatar, name, comment }, i) => {
             while (i < 3) {
               return (
                 <CarouselItem
-                  key={e.id}
-                  avatar={e.avatar}
-                  name={e.name}
-                  comment={e.comment}
+                  key={id}
+                  avatar={avatar}
+                  name={name}
+                  comment={comment}
                 />
               );
             }
@@ -113,15 +118,11 @@ const Carousel = () => {
         </ul>
       </div>
       <div className="carousel__nav">
-        {comments.map((e, i) =>
-          i == 0 ? (
-            <Dot key={e.id} current={true} i={i} onClickDot={onClickDot} />
-          ) : (
-            <Dot key={e.id} i={i} onClickDot={onClickDot} />
-          )
-        )}
+        {comments.map(({ id }, i) => (
+          <Dot key={id} i={i} onClickDot={onClickDot} />
+        ))}
       </div>
-      <Button link="./#GetStarted" cont="Get Started" />
+      <Button link="./#GetStarted">Get Started</Button>
     </div>
   );
 };
