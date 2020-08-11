@@ -4,26 +4,27 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   text-align: center;
-  font-family: 'Be Vietnam', sans-serif;
+  font-family: "Be Vietnam", sans-serif;
   overflow-x: hidden;
+  background: white;
 }
 html {
   width: 100vw;
 }
 
-.block-overflow{
+.block-overflow {
   overflow-y: hidden;
 }
 
-h1{
-  letter-spacing: -0.080rem;
+h1 {
+  letter-spacing: -0.08rem;
   word-spacing: 0.07rem;
   line-height: 1.25;
 }
 
-:root{
+:root {
   --Bright-Red: hsl(13, 14%, 44%);
   --Dark-Blue: hsl(228, 39%, 23%);
 
